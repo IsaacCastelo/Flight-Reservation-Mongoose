@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+
 const flightSchema = new mongoose.Schema({
+    idPlane: { type: mongoose.Schema.Types.ObjectId, ref: 'Plane', required: true },
     origin: { type: String, required: true },
     destiny: { type: String, required: true },
     departureDate: { type: Date, required: true },
